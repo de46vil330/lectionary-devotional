@@ -17,34 +17,43 @@
     --gold: #a67d2e;
     --on-green: #f3f1e6;
     --shadow: 0 30px 60px -30px rgba(31, 42, 34, 0.35);
+    --texture-opacity: 0.5;
+    --texture-blend: overlay;
+    --vignette: none;
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --ground: #14180f;
-      --surface: #1c2117;
-      --ink: #ece7d6;
-      --muted: #9aa38f;
-      --hairline: #333c2b;
-      --green: #4c8768;
-      --green-deep: #3a6b51;
-      --gold: #d4b15e;
-      --on-green: #f3f1e6;
-      --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+      --ground: #1c1610;
+      --surface: #251e15;
+      --ink: #ecdfc8;
+      --muted: #a3937a;
+      --hairline: #3d3323;
+      --green: #74a687;
+      --green-deep: #4c8768;
+      --gold: #d9b15c;
+      --on-green: #1c1610;
+      --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
+      --texture-opacity: 0.22;
+      --texture-blend: screen;
+      --vignette: radial-gradient(ellipse at 50% 0%, rgba(217, 177, 92, 0.06), transparent 60%);
     }
   }
 
   :root[data-theme="dark"] {
-    --ground: #14180f;
-    --surface: #1c2117;
-    --ink: #ece7d6;
-    --muted: #9aa38f;
-    --hairline: #333c2b;
-    --green: #4c8768;
-    --green-deep: #3a6b51;
-    --gold: #d4b15e;
-    --on-green: #f3f1e6;
-    --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+    --ground: #1c1610;
+    --surface: #251e15;
+    --ink: #ecdfc8;
+    --muted: #a3937a;
+    --hairline: #3d3323;
+    --green: #74a687;
+    --green-deep: #4c8768;
+    --gold: #d9b15c;
+    --on-green: #1c1610;
+    --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
+    --texture-opacity: 0.22;
+    --texture-blend: screen;
+    --vignette: radial-gradient(ellipse at 50% 0%, rgba(217, 177, 92, 0.06), transparent 60%);
   }
 
   * { box-sizing: border-box; }
@@ -65,9 +74,17 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
-    opacity: 0.5;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: var(--texture-opacity);
+    mix-blend-mode: var(--texture-blend);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: var(--vignette);
   }
 
   .page {
@@ -161,23 +178,25 @@
   }
 
   .icon-btn {
-    width: 22px;
-    height: 22px;
+    height: 24px;
     flex: 0 0 auto;
-    border-radius: 50%;
+    border-radius: 999px;
     border: 1px solid var(--hairline);
     background: var(--ground);
     color: var(--ink);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-size: 0.62rem;
+    gap: 5px;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     line-height: 1;
-    padding: 0;
-    text-transform: none;
-    letter-spacing: normal;
+    padding: 0 10px;
   }
+
+  .icon-btn .icon-btn-symbol { font-size: 0.6rem; }
 
   .icon-btn:hover { border-color: var(--green); }
   .icon-btn:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
@@ -529,7 +548,7 @@
     <article id="teaching-text" class="teaching">
       <div class="eyebrow">
         Today's teaching &middot; ~2 min read
-        <button type="button" id="voice-btn" class="icon-btn" aria-label="Read today's teaching aloud">&#9654;</button>
+        <button type="button" id="voice-btn" class="icon-btn" aria-label="Read today's teaching aloud"><span class="icon-btn-symbol">&#9654;</span><span id="voice-btn-label">Listen</span></button>
       </div>
       <h2>Grace doesn't run on a clock</h2>
       <p>A landowner goes out at dawn to hire workers for his vineyard, then again at nine, noon, three, and five — that last group getting only an hour before quitting time. When evening comes, he pays every one of them the same full day's wage. The workers who started at sunrise are furious. It isn't fair, they say. The landowner's answer is simple: "Are you envious because I am generous?"</p>
@@ -644,7 +663,8 @@
 
     function setPlaying(isPlaying) {
       voiceBtn.classList.toggle('playing', isPlaying);
-      voiceBtn.innerHTML = isPlaying ? '&#9632;' : '&#9654;';
+      voiceBtn.querySelector('.icon-btn-symbol').innerHTML = isPlaying ? '&#9632;' : '&#9654;';
+      voiceBtn.querySelector('#voice-btn-label').textContent = isPlaying ? 'Stop' : 'Listen';
       voiceBtn.setAttribute('aria-label', isPlaying ? 'Stop reading' : "Read today's teaching aloud");
     }
 
