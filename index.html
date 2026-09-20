@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A daily devotional grounded in the Revised Common Lectionary and the Lutheran Confessions.">
+<meta name="description" content="A daily devotional grounded in the LCMS lectionary and the Lutheran Confessions.">
 <title>The Daily Word</title>
 <style>
   :root {
@@ -97,6 +97,63 @@
     font-size: 0.95rem;
     max-width: 62ch;
     line-height: 1.5;
+  }
+
+  .daily {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .daily-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .daily-head h2 {
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .daily-date {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .daily-refs {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .daily-refs div dt {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 2px;
+  }
+
+  .daily-refs div dd {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .daily-note {
+    font-size: 0.8rem;
+    color: var(--muted);
   }
 
   .layout {
@@ -431,6 +488,15 @@
     <p>Grounded in the LCMS Three-Year Series lectionary and the Lutheran Confessions. The card below shifts color with the liturgical season automatically; right now that's green, for the Season after Pentecost.</p>
   </header>
 
+  <div class="daily" id="daily-card">
+    <div class="daily-head">
+      <h2>Today's Daily Reading</h2>
+      <span class="daily-date" id="daily-date"></span>
+    </div>
+    <div class="daily-refs" id="daily-refs"></div>
+    <p class="daily-note">From the LSB Daily Lectionary (<em>Lutheran Service Book</em>, pp. 299&ndash;304) &mdash; a genuinely different reading each day, independent of the Sunday cycle above.</p>
+  </div>
+
   <div class="layout">
     <div>
       <div class="phone">
@@ -510,6 +576,28 @@
   </footer>
 </div>
 
+<script src="daily-lectionary.js"></script>
+<script>
+  (function () {
+    var dateEl = document.getElementById('daily-date');
+    var refsEl = document.getElementById('daily-refs');
+    var today = new Date();
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var dd = String(today.getDate()).padStart(2, '0');
+    var key = mm + '-' + dd;
+    var entry = (typeof DAILY_LECTIONARY !== 'undefined') ? DAILY_LECTIONARY[key] : null;
+
+    dateEl.textContent = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+
+    if (entry) {
+      refsEl.innerHTML =
+        '<div><dt>Old Testament</dt><dd>' + entry.ot + '</dd></div>' +
+        '<div><dt>New Testament</dt><dd>' + entry.nt + '</dd></div>';
+    } else {
+      refsEl.innerHTML = '<p class="daily-note" style="margin:0;">This date isn\'t in the data yet &mdash; currently only September and October are transcribed. More months are on the way.</p>';
+    }
+  })();
+</script>
 <script>
   (function () {
     var playBtn = document.getElementById('play-btn');
