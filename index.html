@@ -150,8 +150,8 @@
   }
 
   .icon-btn {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     flex: 0 0 auto;
     border-radius: 50%;
     border: 1px solid var(--hairline);
@@ -161,9 +161,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 0.62rem;
     line-height: 1;
     padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
   }
 
   .icon-btn:hover { border-color: var(--green); }
@@ -392,7 +394,13 @@
     min-width: 0;
   }
 
-  .teaching .eyebrow { margin-bottom: 8px; }
+  .teaching .eyebrow {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
 
   .teaching h2 {
     font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
@@ -460,7 +468,7 @@
     <h1>The Daily Word</h1>
   </header>
 
-  <div class="layout">
+  <div class="hero-grid">
     <div>
       <div class="phone">
         <div class="phone-notch"></div>
@@ -482,6 +490,33 @@
         Sunday's gospel is the parable of the workers in the vineyard — paid the same whether they arrived at dawn or five o'clock. Grace doesn't run on a clock.<br><br>
         Proper 20 · Year A · Season after Pentecost
       </div>
+    </div>
+
+    <article id="teaching-text" class="teaching">
+      <div class="eyebrow">
+        Today's teaching &middot; ~2 min read
+        <button type="button" id="voice-btn" class="icon-btn" aria-label="Read today's teaching aloud">&#9654;</button>
+      </div>
+      <h2>Grace doesn't run on a clock</h2>
+      <p>A landowner goes out at dawn to hire workers for his vineyard, then again at nine, noon, three, and five — that last group getting only an hour before quitting time. When evening comes, he pays every one of them the same full day's wage. The workers who started at sunrise are furious. It isn't fair, they say. The landowner's answer is simple: "Are you envious because I am generous?"</p>
+      <p>It's tempting to read this as a story about labor, but it's really a story about how grace works. It doesn't ration itself by seniority, effort, or how long you've kept the rules. Whether you've shown up at dawn or an hour before closing, the invitation is the same, and so is the welcome. What looks like unfairness from the outside is generosity from the inside.</p>
+      <p>The question the parable leaves us isn't "was that fair?" It's whether we can rejoice when someone else's grace turns out to be just as large as our own.</p>
+
+      <blockquote class="confession">
+        <p>"Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor... This faith God imputes for righteousness in His sight."</p>
+        <cite>Augsburg Confession, Article IV &mdash; Of Justification &middot; <a href="https://bookofconcord.org/augsburg-confession/of-justification/">bookofconcord.org</a></cite>
+      </blockquote>
+    </article>
+  </div>
+
+  <div class="layout">
+    <div class="daily" id="daily-card">
+      <div class="daily-head">
+        <h2>Today's Daily Reading</h2>
+        <span class="daily-date" id="daily-date"></span>
+      </div>
+      <div class="daily-refs" id="daily-refs"></div>
+      <p class="daily-note" id="daily-footnote"></p>
     </div>
 
     <div class="panel">
@@ -508,33 +543,6 @@
         Readings follow the LCMS Three-Year Series (Series A), which picks a single Old Testament pairing rather than offering alternates. This page is currently updated by hand for the Sunday cycle &mdash; the reading list above is a fixed example (Proper 20) until full-year automation is built, but the date fields on this page are live.
       </p>
     </div>
-  </div>
-
-  <div class="hero-grid">
-    <div class="daily" id="daily-card">
-      <div class="daily-head">
-        <h2>Today's Daily Reading</h2>
-        <div class="daily-head-right">
-          <span class="daily-date" id="daily-date"></span>
-          <button type="button" id="voice-btn" class="icon-btn" aria-label="Read today's teaching aloud">&#9654;</button>
-        </div>
-      </div>
-      <div class="daily-refs" id="daily-refs"></div>
-      <p class="daily-note" id="daily-footnote"></p>
-    </div>
-
-    <article id="teaching-text" class="teaching">
-      <div class="eyebrow">Today's teaching &middot; ~2 min read</div>
-      <h2>Grace doesn't run on a clock</h2>
-      <p>A landowner goes out at dawn to hire workers for his vineyard, then again at nine, noon, three, and five — that last group getting only an hour before quitting time. When evening comes, he pays every one of them the same full day's wage. The workers who started at sunrise are furious. It isn't fair, they say. The landowner's answer is simple: "Are you envious because I am generous?"</p>
-      <p>It's tempting to read this as a story about labor, but it's really a story about how grace works. It doesn't ration itself by seniority, effort, or how long you've kept the rules. Whether you've shown up at dawn or an hour before closing, the invitation is the same, and so is the welcome. What looks like unfairness from the outside is generosity from the inside.</p>
-      <p>The question the parable leaves us isn't "was that fair?" It's whether we can rejoice when someone else's grace turns out to be just as large as our own.</p>
-
-      <blockquote class="confession">
-        <p>"Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor... This faith God imputes for righteousness in His sight."</p>
-        <cite>Augsburg Confession, Article IV &mdash; Of Justification &middot; <a href="https://bookofconcord.org/augsburg-confession/of-justification/">bookofconcord.org</a></cite>
-      </blockquote>
-    </article>
   </div>
 
   <footer>
