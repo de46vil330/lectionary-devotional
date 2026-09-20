@@ -488,56 +488,6 @@
     <p>Grounded in the LCMS Three-Year Series lectionary and the Lutheran Confessions. The card below shifts color with the liturgical season automatically; right now that's green, for the Season after Pentecost.</p>
   </header>
 
-  <div class="layout">
-    <div>
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="post">
-          <div>
-            <div class="post-season">Season after Pentecost</div>
-            <p class="post-verse">"So the last will be first, and the first will be last."</p>
-            <div class="post-cite">Matthew 20:16, NRSV</div>
-          </div>
-          <div class="post-footer">
-            <span>Proper 20 &middot; Year A</span>
-            <span class="dot"></span>
-            <span>Sept 17, 2026</span>
-          </div>
-        </div>
-      </div>
-      <div class="caption-mock">
-        <strong>For sharing:</strong> "The last will be first, and the first will be last." (Matt. 20:16)<br><br>
-        Sunday's gospel is the parable of the workers in the vineyard — paid the same whether they arrived at dawn or five o'clock. Grace doesn't run on a clock.<br><br>
-        Proper 20 · Year A · Season after Pentecost
-      </div>
-    </div>
-
-    <div class="panel">
-      <div class="field-group">
-        <dt>Today</dt>
-        <dd>Thursday, September 17, 2026</dd>
-        <dt>Liturgical day</dt>
-        <dd>Thursday in Proper 20 (Year A)</dd>
-        <dt>Season</dt>
-        <dd class="swatch"><span class="chip"></span> Green — Season after Pentecost</dd>
-      </div>
-
-      <div class="readings">
-        <h2>This coming Sunday — Sept 20, 2026</h2>
-        <ul>
-          <li><span>First reading</span><span>Isaiah 55:6&ndash;9</span></li>
-          <li><span>Psalm</span><span>27:1&ndash;9</span></li>
-          <li><span>Epistle</span><span>Philippians 1:12&ndash;14, 19&ndash;30</span></li>
-          <li><span>Gospel</span><span>Matthew 20:1&ndash;16</span></li>
-        </ul>
-      </div>
-
-      <p class="note">
-        Readings follow the LCMS Three-Year Series (Series A), which picks a single Old Testament pairing rather than offering alternates. This page is currently updated by hand for the Sunday cycle.
-      </p>
-    </div>
-  </div>
-
   <div class="daily" id="daily-card">
     <div class="daily-head">
       <h2>Today's Daily Reading</h2>
@@ -571,6 +521,56 @@
     </div>
   </div>
 
+  <div class="layout">
+    <div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="post">
+          <div>
+            <div class="post-season">Season after Pentecost</div>
+            <p class="post-verse">"So the last will be first, and the first will be last."</p>
+            <div class="post-cite">Matthew 20:16, NRSV</div>
+          </div>
+          <div class="post-footer">
+            <span>Proper 20 &middot; Year A</span>
+            <span class="dot"></span>
+            <span id="post-date"></span>
+          </div>
+        </div>
+      </div>
+      <div class="caption-mock">
+        <strong>For sharing:</strong> "The last will be first, and the first will be last." (Matt. 20:16)<br><br>
+        Sunday's gospel is the parable of the workers in the vineyard — paid the same whether they arrived at dawn or five o'clock. Grace doesn't run on a clock.<br><br>
+        Proper 20 · Year A · Season after Pentecost
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="field-group">
+        <dt>Today</dt>
+        <dd id="today-date"></dd>
+        <dt>Liturgical day</dt>
+        <dd id="liturgical-day"></dd>
+        <dt>Season</dt>
+        <dd class="swatch"><span class="chip"></span> Green — Season after Pentecost</dd>
+      </div>
+
+      <div class="readings">
+        <h2>This coming Sunday — Sept 20, 2026</h2>
+        <ul>
+          <li><span>First reading</span><span>Isaiah 55:6&ndash;9</span></li>
+          <li><span>Psalm</span><span>27:1&ndash;9</span></li>
+          <li><span>Epistle</span><span>Philippians 1:12&ndash;14, 19&ndash;30</span></li>
+          <li><span>Gospel</span><span>Matthew 20:1&ndash;16</span></li>
+        </ul>
+      </div>
+
+      <p class="note">
+        Readings follow the LCMS Three-Year Series (Series A), which picks a single Old Testament pairing rather than offering alternates. This page is currently updated by hand for the Sunday cycle &mdash; the reading list above is a fixed example (Proper 20) until full-year automation is built, but the date fields on this page are live.
+      </p>
+    </div>
+  </div>
+
   <footer>
     Readings per the LCMS Three-Year Series (Series A). Source: <a href="https://resources.lcms.org/worship-planning/series-a-and-one-year-series-lectionaries-and-summaries/">LCMS Commission on Worship, 2025&ndash;26 Church Year Calendar</a>. Confessional citations drawn from the <a href="https://bookofconcord.org/">Book of Concord</a> (public-domain Triglotta translation).
   </footer>
@@ -598,6 +598,17 @@
       refsEl.innerHTML = '';
       footEl.innerHTML = 'This date falls outside the Trinity season cycle currently built (Advent through Easter season are still on the roadmap).';
     }
+
+    var todayEl = document.getElementById('today-date');
+    var liturgicalEl = document.getElementById('liturgical-day');
+    var postDateEl = document.getElementById('post-date');
+    var longDate = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    var shortDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    var weekday = today.toLocaleDateString('en-US', { weekday: 'long' });
+
+    if (todayEl) todayEl.textContent = longDate;
+    if (liturgicalEl) liturgicalEl.textContent = weekday + ' in the Season after Pentecost';
+    if (postDateEl) postDateEl.textContent = shortDate;
   })();
 </script>
 <script>
