@@ -99,6 +99,63 @@
     line-height: 1.5;
   }
 
+  .daily {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .daily-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .daily-head h2 {
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .daily-date {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .daily-refs {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .daily-refs div dt {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 2px;
+  }
+
+  .daily-refs div dd {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .daily-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
   .layout {
     display: grid;
     grid-template-columns: minmax(280px, 360px) 1fr;
@@ -476,9 +533,18 @@
       </div>
 
       <p class="note">
-        Readings follow the LCMS Three-Year Series (Series A), which picks a single Old Testament pairing rather than offering alternates. This page is currently updated by hand for the Sunday cycle; a true daily cycle, sourced from a historic Lutheran daily lectionary LCMS has cleared for reuse, is the next step.
+        Readings follow the LCMS Three-Year Series (Series A), which picks a single Old Testament pairing rather than offering alternates. This page is currently updated by hand for the Sunday cycle.
       </p>
     </div>
+  </div>
+
+  <div class="daily" id="daily-card">
+    <div class="daily-head">
+      <h2>Today's Daily Reading</h2>
+      <span class="daily-date" id="daily-date"></span>
+    </div>
+    <div class="daily-refs" id="daily-refs"></div>
+    <p class="daily-note" id="daily-footnote"></p>
   </div>
 
   <div class="teaching">
@@ -510,6 +576,30 @@
   </footer>
 </div>
 
+<script src="daily-lectionary.js"></script>
+<script>
+  (function () {
+    var dateEl = document.getElementById('daily-date');
+    var refsEl = document.getElementById('daily-refs');
+    var footEl = document.getElementById('daily-footnote');
+    var today = new Date();
+    var reading = (typeof todaysReading === 'function') ? todaysReading(today) : null;
+
+    dateEl.textContent = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+
+    if (reading) {
+      refsEl.innerHTML =
+        '<div><dt>Morning</dt><dd>' + reading.morning + '</dd></div>' +
+        (reading.evening ? '<div><dt>Evening</dt><dd>' + reading.evening + '</dd></div>' : '');
+      footEl.innerHTML = reading.substituted
+        ? 'From <em>Abiding in the Word</em>, a 1613 Lutheran daily lectionary (LCMS, reproduction permitted). This week’s original evening reading came from the Apocrypha, so a Psalm is substituted here instead.'
+        : 'From <em>Abiding in the Word</em>, a 1613 Lutheran daily lectionary (LCMS, reproduction permitted).';
+    } else {
+      refsEl.innerHTML = '';
+      footEl.innerHTML = 'This date falls outside the Trinity season cycle currently built (Advent through Easter season are still on the roadmap).';
+    }
+  })();
+</script>
 <script>
   (function () {
     var playBtn = document.getElementById('play-btn');
