@@ -282,6 +282,17 @@
     pointer-events: none;
   }
 
+  .post-motif {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -24px;
+    bottom: -18px;
+    color: var(--gold);
+    opacity: 0.16;
+    pointer-events: none;
+  }
+
   .post-season {
     font-size: 0.68rem;
     letter-spacing: 0.18em;
@@ -320,20 +331,6 @@
     border-radius: 50%;
     background: var(--gold);
   }
-
-  .caption-mock {
-    margin-top: 16px;
-    padding: 14px 16px;
-    background: var(--ground);
-    border: 1px dashed var(--hairline);
-    border-radius: 10px;
-    font-family: ui-monospace, "SF Mono", Consolas, monospace;
-    font-size: 0.78rem;
-    line-height: 1.6;
-    color: var(--muted);
-  }
-
-  .caption-mock strong { color: var(--ink); }
 
   .panel {
     display: flex;
@@ -526,6 +523,10 @@
       <div class="phone">
         <div class="phone-notch"></div>
         <div class="post">
+          <svg class="post-motif" viewBox="0 0 100 100" aria-hidden="true">
+            <line x1="50" y1="6" x2="50" y2="94" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+            <line x1="23" y1="30" x2="77" y2="30" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+          </svg>
           <div>
             <div class="post-season">Season after Pentecost</div>
             <p class="post-verse">"So the last will be first, and the first will be last."</p>
@@ -537,11 +538,6 @@
             <span id="post-date"></span>
           </div>
         </div>
-      </div>
-      <div class="caption-mock">
-        <strong>For sharing:</strong> "The last will be first, and the first will be last." (Matt. 20:16)<br><br>
-        Sunday's gospel is the parable of the workers in the vineyard — paid the same whether they arrived at dawn or five o'clock. Grace doesn't run on a clock.<br><br>
-        Proper 20 · Year A · Season after Pentecost
       </div>
     </div>
 
