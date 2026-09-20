@@ -99,6 +99,17 @@
     line-height: 1.5;
   }
 
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 340px) 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  @media (max-width: 760px) {
+    .hero-grid { grid-template-columns: 1fr; }
+  }
+
   .daily {
     background: var(--surface);
     border: 1px solid var(--hairline);
@@ -124,6 +135,12 @@
     margin: 0;
   }
 
+  .daily-head-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   .daily-date {
     font-size: 0.78rem;
     letter-spacing: 0.06em;
@@ -132,10 +149,31 @@
     font-weight: 600;
   }
 
+  .icon-btn {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    border: 1px solid var(--hairline);
+    background: var(--ground);
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .icon-btn:hover { border-color: var(--green); }
+  .icon-btn:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  .icon-btn.playing { background: var(--green); color: var(--on-green); border-color: var(--green); }
+
   .daily-refs {
     display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .daily-refs div dt {
@@ -351,19 +389,8 @@
   .note a { color: var(--green); }
 
   .teaching {
-    border-top: 1px solid var(--hairline);
-    padding-top: 36px;
-    display: grid;
-    grid-template-columns: minmax(0, 66ch) auto;
-    gap: 24px 40px;
-    align-items: start;
+    min-width: 0;
   }
-
-  @media (max-width: 760px) {
-    .teaching { grid-template-columns: 1fr; }
-  }
-
-  .teaching article { min-width: 0; }
 
   .teaching .eyebrow { margin-bottom: 8px; }
 
@@ -381,67 +408,13 @@
     margin: 0 0 16px;
   }
 
-  .teaching article > p:first-of-type::first-letter {
+  .teaching > p:first-of-type::first-letter {
     font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
     font-size: 3.1rem;
     line-height: 0.8;
     float: left;
     padding: 6px 8px 0 0;
     color: var(--green);
-  }
-
-  .voice-box {
-    background: var(--surface);
-    border: 1px solid var(--hairline);
-    border-radius: 12px;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 240px;
-    align-self: start;
-  }
-
-  @media (max-width: 760px) {
-    .voice-box { width: 100%; }
-  }
-
-  .voice-box h3 {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0;
-    font-weight: 600;
-  }
-
-  .voice-buttons { display: flex; gap: 8px; }
-
-  .voice-buttons button {
-    flex: 1;
-    font-family: inherit;
-    font-size: 0.85rem;
-    padding: 9px 12px;
-    border-radius: 8px;
-    border: 1px solid var(--hairline);
-    background: var(--ground);
-    color: var(--ink);
-    cursor: pointer;
-  }
-
-  .voice-buttons button:hover { border-color: var(--green); }
-  .voice-buttons button:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
-
-  .voice-buttons button.primary {
-    background: var(--green);
-    color: var(--on-green);
-    border-color: var(--green);
-  }
-
-  .voice-status {
-    font-size: 0.78rem;
-    color: var(--muted);
-    line-height: 1.5;
   }
 
   .confession {
@@ -485,20 +458,22 @@
   <header>
     <div class="eyebrow">A daily devotional</div>
     <h1>The Daily Word</h1>
-    <p>Grounded in the LCMS Three-Year Series lectionary and the Lutheran Confessions. The card below shifts color with the liturgical season automatically; right now that's green, for the Season after Pentecost.</p>
   </header>
 
-  <div class="daily" id="daily-card">
-    <div class="daily-head">
-      <h2>Today's Daily Reading</h2>
-      <span class="daily-date" id="daily-date"></span>
+  <div class="hero-grid">
+    <div class="daily" id="daily-card">
+      <div class="daily-head">
+        <h2>Today's Daily Reading</h2>
+        <div class="daily-head-right">
+          <span class="daily-date" id="daily-date"></span>
+          <button type="button" id="voice-btn" class="icon-btn" aria-label="Read today's teaching aloud">&#9654;</button>
+        </div>
+      </div>
+      <div class="daily-refs" id="daily-refs"></div>
+      <p class="daily-note" id="daily-footnote"></p>
     </div>
-    <div class="daily-refs" id="daily-refs"></div>
-    <p class="daily-note" id="daily-footnote"></p>
-  </div>
 
-  <div class="teaching">
-    <article id="teaching-text">
+    <article id="teaching-text" class="teaching">
       <div class="eyebrow">Today's teaching &middot; ~2 min read</div>
       <h2>Grace doesn't run on a clock</h2>
       <p>A landowner goes out at dawn to hire workers for his vineyard, then again at nine, noon, three, and five — that last group getting only an hour before quitting time. When evening comes, he pays every one of them the same full day's wage. The workers who started at sunrise are furious. It isn't fair, they say. The landowner's answer is simple: "Are you envious because I am generous?"</p>
@@ -510,15 +485,6 @@
         <cite>Augsburg Confession, Article IV &mdash; Of Justification &middot; <a href="https://bookofconcord.org/augsburg-confession/of-justification/">bookofconcord.org</a></cite>
       </blockquote>
     </article>
-
-    <div class="voice-box">
-      <h3>Listen</h3>
-      <div class="voice-buttons">
-        <button type="button" class="primary" id="play-btn">&#9654; Read aloud</button>
-        <button type="button" id="stop-btn">Stop</button>
-      </div>
-      <p class="voice-status" id="voice-status">Uses your browser's built-in voice &mdash; no account or download needed.</p>
-    </div>
   </div>
 
   <div class="layout">
@@ -556,7 +522,7 @@
       </div>
 
       <div class="readings">
-        <h2>This coming Sunday — Sept 20, 2026</h2>
+        <h2 id="sunday-heading">This coming Sunday — Sept 20, 2026</h2>
         <ul>
           <li><span>First reading</span><span>Isaiah 55:6&ndash;9</span></li>
           <li><span>Psalm</span><span>27:1&ndash;9</span></li>
@@ -602,6 +568,7 @@
     var todayEl = document.getElementById('today-date');
     var liturgicalEl = document.getElementById('liturgical-day');
     var postDateEl = document.getElementById('post-date');
+    var sundayHeadingEl = document.getElementById('sunday-heading');
     var longDate = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
     var shortDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     var weekday = today.toLocaleDateString('en-US', { weekday: 'long' });
@@ -609,19 +576,28 @@
     if (todayEl) todayEl.textContent = longDate;
     if (liturgicalEl) liturgicalEl.textContent = weekday + ' in the Season after Pentecost';
     if (postDateEl) postDateEl.textContent = shortDate;
+
+    if (sundayHeadingEl) {
+      if (today.getDay() === 0) {
+        sundayHeadingEl.textContent = "Today's Sunday Readings";
+      } else {
+        var daysUntilSunday = 7 - today.getDay();
+        var nextSunday = new Date(today);
+        nextSunday.setDate(today.getDate() + daysUntilSunday);
+        var sundayLabel = nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        sundayHeadingEl.textContent = 'This coming Sunday — ' + sundayLabel;
+      }
+    }
   })();
 </script>
 <script>
   (function () {
-    var playBtn = document.getElementById('play-btn');
-    var stopBtn = document.getElementById('stop-btn');
-    var status = document.getElementById('voice-status');
+    var voiceBtn = document.getElementById('voice-btn');
     var textEl = document.getElementById('teaching-text');
 
     if (!('speechSynthesis' in window)) {
-      status.textContent = 'Your browser does not support built-in speech. Try a recent Chrome, Edge, or Safari.';
-      playBtn.disabled = true;
-      stopBtn.disabled = true;
+      voiceBtn.disabled = true;
+      voiceBtn.title = 'Read-aloud is not supported in this browser';
       return;
     }
 
@@ -631,19 +607,25 @@
       return heading + '. ' + paras.join(' ');
     }
 
-    playBtn.addEventListener('click', function () {
+    function setPlaying(isPlaying) {
+      voiceBtn.classList.toggle('playing', isPlaying);
+      voiceBtn.innerHTML = isPlaying ? '&#9632;' : '&#9654;';
+      voiceBtn.setAttribute('aria-label', isPlaying ? 'Stop reading' : "Read today's teaching aloud");
+    }
+
+    voiceBtn.addEventListener('click', function () {
+      if (voiceBtn.classList.contains('playing')) {
+        window.speechSynthesis.cancel();
+        setPlaying(false);
+        return;
+      }
       window.speechSynthesis.cancel();
       var utter = new SpeechSynthesisUtterance(getText());
       utter.rate = 0.95;
-      utter.onstart = function () { status.textContent = 'Reading...'; };
-      utter.onend = function () { status.textContent = 'Finished. Press play to hear it again.'; };
-      utter.onerror = function () { status.textContent = 'Playback was interrupted or blocked by the browser.'; };
+      utter.onstart = function () { setPlaying(true); };
+      utter.onend = function () { setPlaying(false); };
+      utter.onerror = function () { setPlaying(false); };
       window.speechSynthesis.speak(utter);
-    });
-
-    stopBtn.addEventListener('click', function () {
-      window.speechSynthesis.cancel();
-      status.textContent = 'Stopped.';
     });
   })();
 </script>
