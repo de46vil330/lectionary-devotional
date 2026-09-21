@@ -232,9 +232,10 @@
     color: var(--muted);
   }
 
-  .layout {
-    display: grid;
-    grid-template-columns: minmax(280px, 360px);
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .phone {
@@ -529,7 +530,7 @@
   </header>
 
   <div class="hero-grid">
-    <div>
+    <div class="hero-left">
       <div class="phone">
         <div class="phone-notch"></div>
         <div class="post">
@@ -549,6 +550,15 @@
           </div>
         </div>
       </div>
+
+      <div class="daily" id="daily-card">
+        <div class="daily-head">
+          <h2>Today's Daily Reading</h2>
+          <span class="daily-date" id="daily-date"></span>
+        </div>
+        <div class="daily-refs" id="daily-refs"></div>
+        <p class="daily-note" id="daily-footnote"></p>
+      </div>
     </div>
 
     <article id="teaching-text" class="teaching">
@@ -566,16 +576,6 @@
     </article>
   </div>
 
-  <div class="layout">
-    <div class="daily" id="daily-card">
-      <div class="daily-head">
-        <h2>Today's Daily Reading</h2>
-        <span class="daily-date" id="daily-date"></span>
-      </div>
-      <div class="daily-refs" id="daily-refs"></div>
-      <p class="daily-note" id="daily-footnote"></p>
-    </div>
-  </div>
 
 </div>
 
