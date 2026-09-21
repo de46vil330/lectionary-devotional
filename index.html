@@ -631,6 +631,26 @@
       footEl.innerHTML = 'This date falls outside the Trinity season cycle currently built (Advent through Easter season are still on the roadmap).';
     }
 
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var dd = String(today.getDate()).padStart(2, '0');
+    var todaysKey = mm + '-' + dd;
+    var reflection = (typeof DAILY_REFLECTIONS !== 'undefined') ? DAILY_REFLECTIONS[todaysKey] : null;
+
+    if (reflection) {
+      var teachingEl = document.getElementById('teaching-text');
+      teachingEl.querySelector('h2').textContent = reflection.heading;
+      var paraHtml = reflection.paragraphs.map(function (p) { return '<p>' + p + '</p>'; }).join('');
+      teachingEl.querySelectorAll(':scope > p').forEach(function (p) { p.remove(); });
+      teachingEl.querySelector('h2').insertAdjacentHTML('afterend', paraHtml);
+      var confEl = teachingEl.querySelector('.confession');
+      if (reflection.confession && confEl) {
+        confEl.querySelector('p').textContent = '"' + reflection.confession.quote + '"';
+        confEl.querySelector('cite').innerHTML = reflection.confession.cite + ' &middot; <a href="' + reflection.confession.url + '">bookofconcord.org</a>';
+      } else if (confEl) {
+        confEl.remove();
+      }
+    }
+
     var todayEl = document.getElementById('today-date');
     var liturgicalEl = document.getElementById('liturgical-day');
     var postDateEl = document.getElementById('post-date');

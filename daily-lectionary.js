@@ -181,3 +181,23 @@ function todaysReading(date) {
   var entry = DAILY[offset];
   return { morning: entry[0], evening: entry[1], substituted: !!entry[2] };
 }
+
+// Hand-written daily reflections, keyed by "MM-DD" for the current year.
+// Only dates listed here get a daily-written teaching; other days fall back
+// to that week's Sunday teaching until more days are written. Written to
+// match that day's actual reading from todaysReading() above.
+var DAILY_REFLECTIONS = {
+  "09-21": {
+    heading: "Who may dwell on the holy hill?",
+    paragraphs: [
+      "Psalm 14 opens bluntly: the fool says in his heart there is no God. But the verse isn't really about atheism as an opinion — it's a diagnosis. God looks down to see if anyone is wise, anyone seeking him, and the verdict is stark: all have turned aside, there is no one who does good, not even one. It isn't a psalm about bad people out there somewhere. It's a psalm about the human condition, full stop.",
+      "Psalm 15 asks the natural follow-up question: LORD, who may dwell in your tent? Who may live on your holy mountain? And it answers with a list — walk blamelessly, speak truth, don't slander a neighbor, keep your word even when it costs you. Read back to back, the two psalms set an impossible bar right next to a diagnosis that says no one clears it.",
+      "That tension isn't a flaw in the psalms — it's the point. The Law draws the shape of a righteous life precisely so we stop pretending we can climb it under our own strength. What Psalm 15 demands, only grace can supply."
+    ],
+    confession: {
+      quote: "Also they teach that since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence…",
+      cite: "Augsburg Confession, Article II — Of Original Sin",
+      url: "https://bookofconcord.org/augsburg-confession/original-sin/"
+    }
+  }
+};
