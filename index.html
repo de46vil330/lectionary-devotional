@@ -234,13 +234,7 @@
 
   .layout {
     display: grid;
-    grid-template-columns: minmax(280px, 360px) 1fr;
-    gap: 40px;
-    align-items: start;
-  }
-
-  @media (max-width: 760px) {
-    .layout { grid-template-columns: 1fr; }
+    grid-template-columns: minmax(280px, 360px);
   }
 
   .phone {
@@ -544,12 +538,12 @@
             <line x1="23" y1="30" x2="77" y2="30" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
           </svg>
           <div>
-            <div class="post-season">Season after Pentecost</div>
-            <p class="post-verse">"Truly I tell you, the tax collectors and the prostitutes are going into the kingdom of God ahead of you."</p>
-            <div class="post-cite">Matthew 21:31, NRSV</div>
+            <div class="post-season" id="post-season">Season after Pentecost</div>
+            <p class="post-verse" id="post-verse">&nbsp;</p>
+            <div class="post-cite" id="post-cite"></div>
           </div>
           <div class="post-footer">
-            <span>Proper 21 &middot; Year A</span>
+            <span id="post-label"></span>
             <span class="dot"></span>
             <span id="post-date"></span>
           </div>
@@ -559,17 +553,15 @@
 
     <article id="teaching-text" class="teaching">
       <div class="eyebrow">
-        Today's teaching &middot; ~2 min read
+        <span id="teaching-eyebrow-label">Today's teaching &middot; ~2 min read</span>
         <button type="button" id="voice-btn" class="icon-btn" aria-label="Read today's teaching aloud"><span class="icon-btn-symbol">&#9654;</span><span id="voice-btn-label">Listen</span></button>
       </div>
-      <h2>Which one did the will of the father?</h2>
-      <p>A father asks two sons to go work in the vineyard. The first says, "I will not" — but later changes his mind and goes. The second says, "I go, sir" — and never does. When Jesus asks which son actually did his father's will, the answer is obvious: the first, despite the bad start. He applies it directly to the religious leaders listening: tax collectors and prostitutes are entering the kingdom ahead of them, because John came preaching righteousness and those "unrespectable" people believed him and changed course — while the leaders, who said all the right things, watched it happen and still didn't turn.</p>
-      <p>It isn't about who gives the correct answer. It's about who actually turns. The son who initially refuses but eventually goes is a picture of real conversion — messy and delayed, but genuine. The son who agrees instantly and does nothing represents a kind of faith that costs nothing because it's never actually lived out.</p>
-      <p>The uncomfortable question the parable leaves isn't about tax collectors and prostitutes at all — it's about anyone confident their right answers have already settled the matter.</p>
+      <h2 id="teaching-heading">&nbsp;</h2>
+      <div id="teaching-body"></div>
 
-      <blockquote class="confession">
-        <p>"Of Repentance they teach that for those who have fallen after Baptism there is remission of sins whenever they are converted, and that the Church ought to impart absolution to those thus returning to repentance... They also are rejected who do not teach that remission of sins comes through faith but command us to merit grace through satisfactions of our own."</p>
-        <cite>Augsburg Confession, Article XII &mdash; Of Repentance &middot; <a href="https://bookofconcord.org/augsburg-confession/of-repentance/">bookofconcord.org</a></cite>
+      <blockquote class="confession" id="teaching-confession">
+        <p></p>
+        <cite></cite>
       </blockquote>
     </article>
   </div>
@@ -583,27 +575,6 @@
       <div class="daily-refs" id="daily-refs"></div>
       <p class="daily-note" id="daily-footnote"></p>
     </div>
-
-    <div class="panel">
-      <div class="field-group">
-        <dt>Today</dt>
-        <dd id="today-date"></dd>
-        <dt>Liturgical day</dt>
-        <dd id="liturgical-day"></dd>
-        <dt>Season</dt>
-        <dd class="swatch"><span class="chip"></span> Green — Season after Pentecost</dd>
-      </div>
-
-      <div class="readings">
-        <h2 id="sunday-heading">This coming Sunday — Sept 27, 2026</h2>
-        <ul>
-          <li><span>First reading</span><span>Ezekiel 18:1&ndash;4, 25&ndash;32</span></li>
-          <li><span>Psalm</span><span>25:1&ndash;10</span></li>
-          <li><span>Epistle</span><span>Philippians 2:1&ndash;4 (5&ndash;13) 14&ndash;18</span></li>
-          <li><span>Gospel</span><span>Matthew 21:23&ndash;27 (28&ndash;32)</span></li>
-        </ul>
-      </div>
-    </div>
   </div>
 
 </div>
@@ -611,10 +582,19 @@
 <script src="daily-lectionary.js"></script>
 <script>
   (function () {
+    var today = new Date();
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var dd = String(today.getDate()).padStart(2, '0');
+    var isoKey = today.getFullYear() + '-' + mm + '-' + dd;
+    var mmddKey = mm + '-' + dd;
+    var isSunday = today.getDay() === 0;
+    var shortDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+    // --- Daily Reading tile: always shows the 1613 lectionary's citations
+    // for today, regardless of weekday, as reference info. ---
     var dateEl = document.getElementById('daily-date');
     var refsEl = document.getElementById('daily-refs');
     var footEl = document.getElementById('daily-footnote');
-    var today = new Date();
     var reading = (typeof todaysReading === 'function') ? todaysReading(today) : null;
 
     dateEl.textContent = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
@@ -631,48 +611,50 @@
       footEl.innerHTML = 'This date falls outside the Trinity season cycle currently built (Advent through Easter season are still on the roadmap).';
     }
 
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var dd = String(today.getDate()).padStart(2, '0');
-    var todaysKey = mm + '-' + dd;
-    var reflection = (typeof DAILY_REFLECTIONS !== 'undefined') ? DAILY_REFLECTIONS[todaysKey] : null;
+    // --- Featured card + teaching: Sunday shows the LCMS Three-Year Series
+    // reading actually used in church that day; every other day shows the
+    // 1613 daily lectionary reflection instead. ---
+    var featured = isSunday
+      ? ((typeof SUNDAY_CONTENT !== 'undefined') ? SUNDAY_CONTENT[isoKey] : null)
+      : ((typeof DAILY_REFLECTIONS !== 'undefined') ? DAILY_REFLECTIONS[mmddKey] : null);
 
-    if (reflection) {
-      var teachingEl = document.getElementById('teaching-text');
-      teachingEl.querySelector('h2').textContent = reflection.heading;
-      var paraHtml = reflection.paragraphs.map(function (p) { return '<p>' + p + '</p>'; }).join('');
-      teachingEl.querySelectorAll(':scope > p').forEach(function (p) { p.remove(); });
-      teachingEl.querySelector('h2').insertAdjacentHTML('afterend', paraHtml);
-      var confEl = teachingEl.querySelector('.confession');
-      if (reflection.confession && confEl) {
-        confEl.querySelector('p').textContent = '"' + reflection.confession.quote + '"';
-        confEl.querySelector('cite').innerHTML = reflection.confession.cite + ' &middot; <a href="' + reflection.confession.url + '">bookofconcord.org</a>';
-      } else if (confEl) {
-        confEl.remove();
-      }
-    }
-
-    var todayEl = document.getElementById('today-date');
-    var liturgicalEl = document.getElementById('liturgical-day');
+    var postVerseEl = document.getElementById('post-verse');
+    var postCiteEl = document.getElementById('post-cite');
+    var postLabelEl = document.getElementById('post-label');
     var postDateEl = document.getElementById('post-date');
-    var sundayHeadingEl = document.getElementById('sunday-heading');
-    var longDate = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
-    var shortDate = today.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    var weekday = today.toLocaleDateString('en-US', { weekday: 'long' });
+    var eyebrowLabelEl = document.getElementById('teaching-eyebrow-label');
+    var headingEl = document.getElementById('teaching-heading');
+    var bodyEl = document.getElementById('teaching-body');
+    var confEl = document.getElementById('teaching-confession');
 
-    if (todayEl) todayEl.textContent = longDate;
-    if (liturgicalEl) liturgicalEl.textContent = weekday + ' in the Season after Pentecost';
-    if (postDateEl) postDateEl.textContent = shortDate;
+    postDateEl.textContent = shortDate;
 
-    if (sundayHeadingEl) {
-      if (today.getDay() === 0) {
-        sundayHeadingEl.textContent = "Today's Sunday Readings";
+    if (featured) {
+      postVerseEl.textContent = featured.verse;
+      postCiteEl.textContent = featured.citation;
+      postLabelEl.textContent = featured.label;
+      eyebrowLabelEl.textContent = (isSunday ? "This Sunday's teaching" : "Today's teaching") + ' · ~2 min read';
+      headingEl.textContent = featured.heading;
+      bodyEl.innerHTML = featured.paragraphs.map(function (p) { return '<p>' + p + '</p>'; }).join('');
+      if (featured.confession) {
+        confEl.style.display = '';
+        confEl.querySelector('p').textContent = '"' + featured.confession.quote + '"';
+        confEl.querySelector('cite').innerHTML = featured.confession.cite + ' &middot; <a href="' + featured.confession.url + '">bookofconcord.org</a>';
       } else {
-        var daysUntilSunday = 7 - today.getDay();
-        var nextSunday = new Date(today);
-        nextSunday.setDate(today.getDate() + daysUntilSunday);
-        var sundayLabel = nextSunday.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-        sundayHeadingEl.textContent = 'This coming Sunday — ' + sundayLabel;
+        confEl.style.display = 'none';
       }
+    } else {
+      postVerseEl.textContent = isSunday
+        ? "This Sunday's reading hasn't been written yet."
+        : "Today's reading hasn't been written yet.";
+      postCiteEl.textContent = '';
+      postLabelEl.textContent = isSunday ? 'Sunday' : 'Daily Lectionary';
+      eyebrowLabelEl.textContent = "Today's teaching";
+      headingEl.textContent = 'Check back soon';
+      bodyEl.innerHTML = '<p>' + (isSunday
+        ? "This Sunday's LCMS reading and teaching haven't been written yet."
+        : "Today's reflection from the daily lectionary hasn't been written yet. See the Daily Reading tile below for today's actual citations.") + '</p>';
+      confEl.style.display = 'none';
     }
   })();
 </script>
