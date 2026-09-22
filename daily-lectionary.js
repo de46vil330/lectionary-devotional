@@ -204,6 +204,22 @@ var DAILY_REFLECTIONS = {
       cite: "Augsburg Confession, Article II — Of Original Sin",
       url: "https://bookofconcord.org/augsburg-confession/original-sin/"
     }
+  },
+  "09-22": {
+    label: "Daily Lectionary",
+    verse: "“Preserve me, O God, for in you I take refuge… I have no good apart from you.”",
+    citation: "Psalm 16:1–2, NRSV",
+    heading: "No good apart from you",
+    paragraphs: [
+      "Psalm 16 opens as a prayer of refuge, then makes a striking claim: I have no good apart from you. Not \"you're one good thing among several\" — the only good there is. Everything else the psalm lists, the good company, the pleasant inheritance, flows from that one relationship rather than sitting alongside it.",
+      "Psalm 17 asks for the same refuge under a harder pressure: enemies who trust their own strength and their \"portion in this life.\" Against that, the psalmist asks to be kept \"as the apple of the eye,\" hidden \"in the shadow of your wings\" — and closes with an odd kind of confidence: satisfied, it says, just by beholding God's presence. Not rescued and moving on to something else. Satisfied by the presence itself.",
+      "Both psalms describe a trust that has nowhere else to go. That isn't weakness dressed up as piety — it's just an honest description of what it actually means to have no other god before this one."
+    ],
+    confession: {
+      quote: "We should fear, love, and trust in God above all things.",
+      cite: "Small Catechism, The Ten Commandments — The First Commandment",
+      url: "https://bookofconcord.org/small-catechism/ten-commandments/"
+    }
   }
 };
 
