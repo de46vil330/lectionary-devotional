@@ -1,0 +1,43 @@
+name: Generate daily reflection
+
+on:
+  schedule:
+    # 07:00 UTC = 3:00 AM Eastern (EDT). Runs overnight so tomorrow's
+    # reflection is ready well before a 6-7 AM Eastern wake-up. Note this
+    # shifts to 2:00 AM Eastern once EDT ends for the year (cron doesn't
+    # follow DST) -- still comfortably before a morning wake-up either way.
+    - cron: '0 7 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install @anthropic-ai/sdk
+
+      - name: Generate tomorrow's reflection
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-daily-reflection.mjs
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "daily-word-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet -- daily-reflections.json; then
+            git add daily-reflections.json
+            git commit -m "Auto-generate daily reflection"
+            git push
+          else
+            echo "No changes to commit."
+          fi

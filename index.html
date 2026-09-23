@@ -581,7 +581,7 @@
 
 <script src="daily-lectionary.js"></script>
 <script>
-  (function () {
+  (async function () {
     var today = new Date();
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var dd = String(today.getDate()).padStart(2, '0');
@@ -613,10 +613,21 @@
 
     // --- Featured card + teaching: Sunday shows the LCMS Three-Year Series
     // reading actually used in church that day; every other day shows the
-    // 1613 daily lectionary reflection instead. ---
-    var featured = isSunday
-      ? ((typeof SUNDAY_CONTENT !== 'undefined') ? SUNDAY_CONTENT[isoKey] : null)
-      : ((typeof DAILY_REFLECTIONS !== 'undefined') ? DAILY_REFLECTIONS[mmddKey] : null);
+    // 1613 daily lectionary reflection instead. Both data sets are fetched
+    // as JSON (rather than inline globals) so the nightly automation script
+    // can safely read and append to the same files. ---
+    var featured = null;
+    try {
+      if (isSunday) {
+        var sundayData = await (await fetch('sunday-content.json')).json();
+        featured = sundayData[isoKey] || null;
+      } else {
+        var dailyData = await (await fetch('daily-reflections.json')).json();
+        featured = dailyData[mmddKey] || null;
+      }
+    } catch (e) {
+      featured = null;
+    }
 
     var postVerseEl = document.getElementById('post-verse');
     var postCiteEl = document.getElementById('post-cite');

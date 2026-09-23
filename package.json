@@ -1,0 +1,9 @@
+{
+  "name": "lectionary-devotional",
+  "private": true,
+  "type": "commonjs",
+  "description": "Automation for The Daily Word's nightly reflection generation.",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.65.0"
+  }
+}

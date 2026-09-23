@@ -182,72 +182,10 @@ function todaysReading(date) {
   return { morning: entry[0], evening: entry[1], substituted: !!entry[2] };
 }
 
-// Hand-written daily reflections, keyed by "MM-DD" for the current year.
-// This is the content shown Monday-Saturday: the featured verse card and
-// "today's teaching" are both driven by this (the 1613 daily lectionary),
-// NOT the Sunday lectionary. Only dates listed here have a written
-// reflection; other weekdays fall back to a "check back soon" message
-// rather than showing unrelated content.
-var DAILY_REFLECTIONS = {
-  "09-21": {
-    label: "Daily Lectionary",
-    verse: "“The fool says in his heart, ‘There is no God.’”",
-    citation: "Psalm 14:1, NRSV",
-    heading: "Who may dwell on the holy hill?",
-    paragraphs: [
-      "Psalm 14 opens bluntly: the fool says in his heart there is no God. But the verse isn't really about atheism as an opinion — it's a diagnosis. God looks down to see if anyone is wise, anyone seeking him, and the verdict is stark: all have turned aside, there is no one who does good, not even one. It isn't a psalm about bad people out there somewhere. It's a psalm about the human condition, full stop.",
-      "Psalm 15 asks the natural follow-up question: LORD, who may dwell in your tent? Who may live on your holy mountain? And it answers with a list — walk blamelessly, speak truth, don't slander a neighbor, keep your word even when it costs you. Read back to back, the two psalms set an impossible bar right next to a diagnosis that says no one clears it.",
-      "That tension isn't a flaw in the psalms — it's the point. The Law draws the shape of a righteous life precisely so we stop pretending we can climb it under our own strength. What Psalm 15 demands, only grace can supply."
-    ],
-    confession: {
-      quote: "Also they teach that since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence…",
-      cite: "Augsburg Confession, Article II — Of Original Sin",
-      url: "https://bookofconcord.org/augsburg-confession/original-sin/"
-    }
-  },
-  "09-22": {
-    label: "Daily Lectionary",
-    verse: "“Preserve me, O God, for in you I take refuge… I have no good apart from you.”",
-    citation: "Psalm 16:1–2, NRSV",
-    heading: "No good apart from you",
-    paragraphs: [
-      "Psalm 16 opens as a prayer of refuge, then makes a striking claim: I have no good apart from you. Not \"you're one good thing among several\" — the only good there is. Everything else the psalm lists, the good company, the pleasant inheritance, flows from that one relationship rather than sitting alongside it.",
-      "Psalm 17 asks for the same refuge under a harder pressure: enemies who trust their own strength and their \"portion in this life.\" Against that, the psalmist asks to be kept \"as the apple of the eye,\" hidden \"in the shadow of your wings\" — and closes with an odd kind of confidence: satisfied, it says, just by beholding God's presence. Not rescued and moving on to something else. Satisfied by the presence itself.",
-      "Both psalms describe a trust that has nowhere else to go. That isn't weakness dressed up as piety — it's just an honest description of what it actually means to have no other god before this one."
-    ],
-    confession: {
-      quote: "We should fear, love, and trust in God above all things.",
-      cite: "Small Catechism, The Ten Commandments — The First Commandment",
-      url: "https://bookofconcord.org/small-catechism/ten-commandments/"
-    }
-  }
-};
+// Daily reflections and Sunday content now live in daily-reflections.json
+// and sunday-content.json instead of here, so the nightly automation script
+// can safely read and append to them without editing this file.
 
-// Hand-written Sunday content, keyed by "YYYY-MM-DD" (the actual calendar
-// date of that Sunday). This is what shows ONLY on that specific Sunday --
-// the LCMS Three-Year Series (Series A) reading actually used in church
-// that day, not the daily lectionary. Weekdays never read from this.
-var SUNDAY_CONTENT = {
-  "2026-09-27": {
-    label: "Proper 21 · Year A",
-    verse: "“Truly I tell you, the tax collectors and the prostitutes are going into the kingdom of God ahead of you.”",
-    citation: "Matthew 21:31, NRSV",
-    readings: {
-      ot: "Ezekiel 18:1–4, 25–32",
-      psalm: "25:1–10",
-      epistle: "Philippians 2:1–4 (5–13) 14–18",
-      gospel: "Matthew 21:23–27 (28–32)"
-    },
-    heading: "Which one did the will of the father?",
-    paragraphs: [
-      "A father asks two sons to go work in the vineyard. The first says, \"I will not\" — but later changes his mind and goes. The second says, \"I go, sir\" — and never does. When Jesus asks which son actually did his father's will, the answer is obvious: the first, despite the bad start. He applies it directly to the religious leaders listening: tax collectors and prostitutes are entering the kingdom ahead of them, because John came preaching righteousness and those \"unrespectable\" people believed him and changed course — while the leaders, who said all the right things, watched it happen and still didn't turn.",
-      "It isn't about who gives the correct answer. It's about who actually turns. The son who initially refuses but eventually goes is a picture of real conversion — messy and delayed, but genuine. The son who agrees instantly and does nothing represents a kind of faith that costs nothing because it's never actually lived out.",
-      "The uncomfortable question the parable leaves isn't about tax collectors and prostitutes at all — it's about anyone confident their right answers have already settled the matter."
-    ],
-    confession: {
-      quote: "Of Repentance they teach that for those who have fallen after Baptism there is remission of sins whenever they are converted, and that the Church ought to impart absolution to those thus returning to repentance... They also are rejected who do not teach that remission of sins comes through faith but command us to merit grace through satisfactions of our own.",
-      cite: "Augsburg Confession, Article XII — Of Repentance",
-      url: "https://bookofconcord.org/augsburg-confession/of-repentance/"
-    }
-  }
-};
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { WEEKS: WEEKS, DAILY: DAILY, trinitySunday: trinitySunday, computeEaster: computeEaster, todaysReading: todaysReading };
+}

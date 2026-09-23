@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ac-iv-justification",
+    "quote": "Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor... This faith God imputes for righteousness in His sight.",
+    "cite": "Augsburg Confession, Article IV — Of Justification",
+    "url": "https://bookofconcord.org/augsburg-confession/of-justification/",
+    "themes": ["grace", "justification", "faith", "works", "merit"]
+  },
+  {
+    "id": "ac-ii-original-sin",
+    "quote": "Also they teach that since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence…",
+    "cite": "Augsburg Confession, Article II — Of Original Sin",
+    "url": "https://bookofconcord.org/augsburg-confession/original-sin/",
+    "themes": ["sin", "human condition", "fall", "corruption"]
+  },
+  {
+    "id": "ac-xii-repentance",
+    "quote": "Of Repentance they teach that for those who have fallen after Baptism there is remission of sins whenever they are converted, and that the Church ought to impart absolution to those thus returning to repentance... They also are rejected who do not teach that remission of sins comes through faith but command us to merit grace through satisfactions of our own.",
+    "cite": "Augsburg Confession, Article XII — Of Repentance",
+    "url": "https://bookofconcord.org/augsburg-confession/of-repentance/",
+    "themes": ["repentance", "conversion", "confession", "absolution", "turning back"]
+  },
+  {
+    "id": "sc-first-commandment",
+    "quote": "We should fear, love, and trust in God above all things.",
+    "cite": "Small Catechism, The Ten Commandments — The First Commandment",
+    "url": "https://bookofconcord.org/small-catechism/ten-commandments/",
+    "themes": ["trust", "idolatry", "fear of God", "love of God", "refuge"]
+  },
+  {
+    "id": "sc-lords-prayer-intro",
+    "quote": "God would thereby tenderly urge us to believe that He is our true Father, and that we are His true children, so that we may ask Him confidently with all assurance, as dear children ask their dear father.",
+    "cite": "Small Catechism, The Lord's Prayer — Introduction",
+    "url": "https://bookofconcord.org/small-catechism/the-lords-prayer/",
+    "themes": ["prayer", "God as Father", "confidence", "asking", "sonship"]
+  },
+  {
+    "id": "sc-baptism-benefits",
+    "quote": "It works forgiveness of sins, delivers from death and the devil, and gives eternal salvation to all who believe this, as the words and promises of God declare.",
+    "cite": "Small Catechism, The Sacrament of Holy Baptism — What Benefits Does Baptism Give?",
+    "url": "https://bookofconcord.org/small-catechism/the-sacrament-of-holy-baptism/",
+    "themes": ["baptism", "sacrament", "forgiveness", "death", "salvation", "new life"]
+  }
+]
