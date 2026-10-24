@@ -78,46 +78,61 @@ From this list of pre-verified confessional excerpts, choose the ONE that best f
 ${citationList}
 ${lastCitationId ? `\n(Yesterday's entry already used "${lastCitationId}" -- prefer a different one unless it is genuinely the only good fit.)` : ''}
 
-Respond with ONLY valid JSON, no other text, matching exactly this shape:
-{
-  "heading": "a short, specific heading (not generic, 3-7 words)",
-  "verse": "a short quotable line from the actual reading, in quotation marks, attributed naturally in-text or left for the citation field",
-  "citation": "e.g. Psalm 18:2, NRSV -- the specific reference for the verse field",
-  "paragraphs": ["paragraph 1", "paragraph 2", "paragraph 3"],
-  "confessionId": "the id of the citation you chose from the list above"
-}`;
+Call the submit_reflection tool with your finished entry.`;
 
-  const response = await client.messages.create({
-    model: 'claude-opus-4-5',
-    max_tokens: 1500,
-    messages: [{ role: 'user', content: prompt }]
-  });
+  const tools = [{
+    name: 'submit_reflection',
+    description: "Submit the finished daily reflection entry.",
+    input_schema: {
+      type: 'object',
+      properties: {
+        heading: { type: 'string', description: 'A short, specific heading (not generic), 3-7 words' },
+        verse: { type: 'string', description: 'A short quotable line from the actual reading, in quotation marks' },
+        citation: { type: 'string', description: 'e.g. "Psalm 18:2, NRSV" -- the specific reference for the verse field' },
+        paragraphs: {
+          type: 'array',
+          items: { type: 'string' },
+          minItems: 3,
+          maxItems: 3,
+          description: 'Exactly three short paragraphs of reflection'
+        },
+        confessionId: {
+          type: 'string',
+          enum: citations.map(c => c.id),
+          description: 'The id of the pre-verified citation chosen from the list in the prompt'
+        }
+      },
+      required: ['heading', 'verse', 'citation', 'paragraphs', 'confessionId']
+    }
+  }];
 
-  const text = response.content.find(b => b.type === 'text')?.text ?? '';
-  let parsed;
+  let response;
   try {
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    parsed = JSON.parse(jsonMatch ? jsonMatch[0] : text);
+    response = await client.messages.create({
+      model: 'claude-sonnet-5',
+      max_tokens: 1500,
+      tools,
+      tool_choice: { type: 'tool', name: 'submit_reflection' },
+      messages: [{ role: 'user', content: prompt }]
+    });
   } catch (e) {
-    console.error('Model response was not valid JSON -- aborting without writing anything.\n', text);
+    console.error('Anthropic API call failed:', e.status, e.message);
     process.exitCode = 1;
     return;
   }
 
-  const required = ['heading', 'verse', 'citation', 'paragraphs', 'confessionId'];
-  const missing = required.filter(k => !parsed[k]);
-  if (missing.length || !Array.isArray(parsed.paragraphs) || parsed.paragraphs.length < 2) {
-    console.error('Model response is missing required fields:', missing, '\n', parsed);
+  const toolUse = response.content.find(b => b.type === 'tool_use' && b.name === 'submit_reflection');
+  if (!toolUse) {
+    console.error('Model did not call submit_reflection -- aborting without writing anything. Response was:', JSON.stringify(response.content));
     process.exitCode = 1;
     return;
   }
 
+  // input_schema (incl. the confessionId enum) is enforced by the API, so
+  // this is already validated JSON matching an id in our library -- no
+  // regex-extraction or manual shape-checking needed.
+  const parsed = toolUse.input;
   const chosenCitation = citations.find(c => c.id === parsed.confessionId);
-  if (!chosenCitation) {
-    console.error(`Model chose an unknown citation id "${parsed.confessionId}" -- aborting without writing anything.`);
-    process.exitCode = 1;
-    return;
-  }
 
   reflections[mmdd] = {
     label: 'Daily Lectionary',
