@@ -30,5 +30,23 @@
       "cite": "Small Catechism, The Ten Commandments — The First Commandment",
       "url": "https://bookofconcord.org/small-catechism/ten-commandments/"
     }
+  },
+  "10-28": {
+    "label": "Daily Lectionary",
+    "verse": "\"Make haste, O God, to deliver me! Make haste to help me, O LORD!\"",
+    "citation": "Psalm 70:1, ESV",
+    "heading": "Make Haste, O God, to Help",
+    "paragraphs": [
+      "Psalm 70 doesn't ease into prayer -- it opens with a cry for rescue, repeated almost word for word from the end of Psalm 40. David isn't interested in polished phrases. He's drowning, enemies are circling, and he needs God now, not eventually. There's something honest and almost uncomfortable about a prayer this urgent -- most of us have been taught to compose ourselves before we approach God. David skips that step entirely.",
+      "Then Psalm 71 picks up the same desperation but stretches it out over a whole life. Here the voice is older -- 'do not cast me off in the time of old age' -- looking back at a God who has been faithful since birth and pleading for that faithfulness to hold to the very end. The psalmist doesn't claim to have earned this care. He simply remembers it, and remembering becomes the grounds for asking again.",
+      "Both psalms refuse to let us believe that faith means never being desperate. They hand us words for the moments when we have no other words -- when all we can say is hurry, Lord, help me, don't leave me now. And the promise underneath both psalms is the same one we cling to in every crisis: God does not require us to get our prayers right before He turns His ear. He hears the cry itself, and He comes."
+    ],
+    "confession": {
+      "quote": "We should fear, love, and trust in God above all things.",
+      "cite": "Small Catechism, The Ten Commandments — The First Commandment",
+      "url": "https://bookofconcord.org/small-catechism/ten-commandments/"
+    },
+    "confessionIdUsed": "sc-first-commandment",
+    "generatedBy": "automation"
   }
 }
