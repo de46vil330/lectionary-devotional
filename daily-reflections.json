@@ -48,5 +48,23 @@
     },
     "confessionIdUsed": "sc-first-commandment",
     "generatedBy": "automation"
+  },
+  "10-30": {
+    "label": "Daily Lectionary",
+    "verse": "\"Yet God my King is from of old, working salvation in the midst of the earth.\"",
+    "citation": "Psalm 74:12, ESV",
+    "heading": "Remember, O Lord, and Rise Up",
+    "paragraphs": [
+      "Psalm 74 is a cry from the ruins. The sanctuary is smoke, the enemy has set up his own standards where God's people once worshiped, and the psalmist asks the question every suffering believer eventually asks: why have you cast us off forever? There's no pretending here, no forced smile. The psalm simply lays the wreckage in front of God and says, look at this. How long?",
+      "But right in the middle of the complaint, something shifts. The psalmist remembers -- you divided the sea, you crushed the heads of the sea monsters, you fixed the sun and moon, you established the boundaries of the earth. The appeal isn't to God's sympathy but to his character and his track record. He has always been the one who works salvation in the midst of the earth, not from a safe distance. That memory doesn't erase the ruins, but it gives the complaint somewhere to stand.",
+      "Psalm 75 answers almost like morning after that long night: we give thanks, for your name is near. God himself sets the time for judgment; he is the one who brings down the proud and lifts up the humble, holding the cup of justice in his own hand. The two psalms together teach something very Lutheran -- faith doesn't deny the ruins or demand we feel differently than we do, but it keeps calling on the God who has always been near, long before we could see it."
+    ],
+    "confession": {
+      "quote": "God would thereby tenderly urge us to believe that He is our true Father, and that we are His true children, so that we may ask Him confidently with all assurance, as dear children ask their dear father.",
+      "cite": "Small Catechism, The Lord's Prayer — Introduction",
+      "url": "https://bookofconcord.org/small-catechism/the-lords-prayer/"
+    },
+    "confessionIdUsed": "sc-lords-prayer-intro",
+    "generatedBy": "automation"
   }
 }
