@@ -66,5 +66,23 @@
     },
     "confessionIdUsed": "sc-lords-prayer-intro",
     "generatedBy": "automation"
+  },
+  "10-31": {
+    "label": "Daily Lectionary",
+    "verse": "\"I will remember the deeds of the LORD; yes, I will remember your wonders of old.\"",
+    "citation": "Psalm 77:11, ESV",
+    "heading": "Remembering God's Mighty Deeds",
+    "paragraphs": [
+      "Psalm 76 opens with God known and feared in Judah, his tent in Zion, his power breaking the flashing arrows, the shield, the sword, and the weapons of war. This is a picture of a God who doesn't need our help defending his people -- when he rises to judgment, the earth itself goes quiet and still. It's the kind of security that makes human might look small, because it is.",
+      "Then the evening reading turns the camera around. Psalm 77 is not a song of confident triumph but of a soul in trouble, crying aloud to God in the night, wondering if his steadfast love has run dry, if his promises have failed. Anyone who has lain awake rehearsing their fears knows this psalm. The turn doesn't come from the psalmist finding a new argument or a burst of willpower -- it comes from memory.",
+      "\"I will remember the deeds of the LORD,\" he says, and starts recounting the exodus, the sea, the ancient wonders. That's the move for us too, in our own sleepless nights: not to manufacture feelings of faith, but to remember what God has actually done -- supremely in Christ crucified and risen. Our trust isn't self-generated; it rests on deeds already accomplished for us, which is why we can say with the Catechism that we are to fear, love, and trust in God above all things."
+    ],
+    "confession": {
+      "quote": "We should fear, love, and trust in God above all things.",
+      "cite": "Small Catechism, The Ten Commandments — The First Commandment",
+      "url": "https://bookofconcord.org/small-catechism/ten-commandments/"
+    },
+    "confessionIdUsed": "sc-first-commandment",
+    "generatedBy": "automation"
   }
 }
