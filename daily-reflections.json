@@ -84,5 +84,23 @@
     },
     "confessionIdUsed": "sc-first-commandment",
     "generatedBy": "automation"
+  },
+  "11-03": {
+    "label": "Daily Lectionary",
+    "verse": "\"I have laid upon you the years of their iniquity... you shall bear the sin of the house of Israel.\"",
+    "citation": "Ezekiel 4:4-5, ESV",
+    "heading": "Bearing the Weight of Israel's Sin",
+    "paragraphs": [
+      "God tells Ezekiel to lie on his side, bound with cords, acting out the siege of Jerusalem in his own body. For over a year he bears the weight of Israel's sin pressed into his flesh -- a living sign nobody could ignore. It's a strange and uncomfortable chapter, and it's meant to be. This isn't theater; it's judgment made visible, so the people could see what their rebellion actually costs.",
+      "Chapter 5 turns from sign to sentence. Jerusalem, set in the center of the nations, has become worse than the nations around her -- she has rejected the very statutes God gave for life. The famine, the sword, the scattering: none of it is arbitrary cruelty. It's the slow unraveling of a people who trusted everything except the God who made and kept them.",
+      "Here's the strange mercy underneath the wreckage: God doesn't look away from what sin costs, and neither does he hide it from us. He lets Ezekiel carry it visibly so that we might finally see our own iniquity named, not excused. The weight Ezekiel bore in picture, Christ bore in full -- not as a sign pointing elsewhere, but as the sin-bearer himself, so that the siege against us would end at the cross and not at our own ruin."
+    ],
+    "confession": {
+      "quote": "Also they teach that since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence…",
+      "cite": "Augsburg Confession, Article II — Of Original Sin",
+      "url": "https://bookofconcord.org/augsburg-confession/original-sin/"
+    },
+    "confessionIdUsed": "ac-ii-original-sin",
+    "generatedBy": "automation"
   }
 }
