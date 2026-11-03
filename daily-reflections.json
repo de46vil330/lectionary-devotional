@@ -102,5 +102,23 @@
     },
     "confessionIdUsed": "ac-ii-original-sin",
     "generatedBy": "automation"
+  },
+  "11-04": {
+    "label": "Daily Lectionary",
+    "verse": "\"Then shall ye know that I am the LORD.\"",
+    "citation": "Ezekiel 6:7, KJV",
+    "heading": "The Mountains Will Know the Lord",
+    "paragraphs": [
+      "Ezekiel 6 is a word against the high places -- those hills and altars where Israel had set up idols, mixing worship of the true God with whatever else seemed useful at the time. God doesn't negotiate with this. The mountains themselves are addressed, the altars are named for destruction, and the refrain lands again and again: \"then shall ye know that I am the LORD.\" Not a gentle correction. A leveling.",
+      "Chapter 7 presses the point further. \"An end, the end is come\" -- the day has arrived, and no amount of silver or gold will buy anyone out of it. Judgment isn't delayed because people have run out of excuses; it comes because the idolatry has run its course. There's a strange mercy hidden even here: God names what's false so that what's left, however little, is true.",
+      "We don't usually bow to carved images, but we know what it is to build our own high places -- the things we trust to hold us up when God himself feels distant or demanding. The first commandment doesn't just forbid statues; it claims the whole heart. Fear, love, and trust belong to God above all things, not because he's jealous for no reason, but because everything else we trust will eventually be torn down, and he alone remains to be known."
+    ],
+    "confession": {
+      "quote": "We should fear, love, and trust in God above all things.",
+      "cite": "Small Catechism, The Ten Commandments — The First Commandment",
+      "url": "https://bookofconcord.org/small-catechism/ten-commandments/"
+    },
+    "confessionIdUsed": "sc-first-commandment",
+    "generatedBy": "automation"
   }
 }
