@@ -120,5 +120,23 @@
     },
     "confessionIdUsed": "sc-first-commandment",
     "generatedBy": "automation"
+  },
+  "11-05": {
+    "label": "Daily Lectionary",
+    "verse": "\"Son of man, have you seen what the elders of the house of Israel are doing in the dark, each in his room of pictures?\"",
+    "citation": "Ezekiel 8:12, ESV",
+    "heading": "Idols in the Dark, Mercy on the Mark",
+    "paragraphs": [
+      "Ezekiel is given a vision tour of the temple, and it's worse than anyone imagined. Behind closed doors, in rooms carved with idols, the elders of Israel are burning incense to images and telling themselves God doesn't see -- \"the LORD has forsaken the land.\" The irony is brutal: the very people charged with guarding God's house have filled it with everything but God. Chapter 9 answers that secret worship with a terrifying visitation -- a man with a writing kit marks the foreheads of those who grieve over the sin, and judgment falls on everyone else, beginning at the sanctuary itself.",
+      "We don't burn incense to carved beasts, but we know what it is to keep a private room of pictures -- the places in our hearts we assume God can't see, where we've quietly set up something else to trust, fear, or love more than him. Ezekiel's vision strips away the comfortable fiction that worship is only what happens in public. God sees the whole house, every room, including the ones we've locked.",
+      "And yet the mark in chapter 9 is mercy before it is judgment -- a sign placed on those who mourn their sin, protecting them precisely because they have stopped pretending. That's the pattern grace always takes: not denial, not bargaining, but honest grief over what's true, met by a God who marks his own for safekeeping. The temple may be defiled, but the One who marks still saves."
+    ],
+    "confession": {
+      "quote": "Of Repentance they teach that for those who have fallen after Baptism there is remission of sins whenever they are converted, and that the Church ought to impart absolution to those thus returning to repentance... They also are rejected who do not teach that remission of sins comes through faith but command us to merit grace through satisfactions of our own.",
+      "cite": "Augsburg Confession, Article XII — Of Repentance",
+      "url": "https://bookofconcord.org/augsburg-confession/of-repentance/"
+    },
+    "confessionIdUsed": "ac-xii-repentance",
+    "generatedBy": "automation"
   }
 }
