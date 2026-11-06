@@ -138,5 +138,23 @@
     },
     "confessionIdUsed": "ac-xii-repentance",
     "generatedBy": "automation"
+  },
+  "11-07": {
+    "label": "Daily Lectionary",
+    "verse": "\"They have seen false visions and lying divinations... and have made others hope that the word would be confirmed.\"",
+    "citation": "Ezekiel 13:6, ESV",
+    "heading": "Whitewashed Walls Still Fall Down",
+    "paragraphs": [
+      "Ezekiel 13 is God's word against the prophets who prophesy out of their own hearts, telling the people \"peace\" when there is no peace. They plaster a flimsy wall with whitewash -- it looks solid, it looks finished, but the first real storm brings it down on everyone's heads. False comfort is still false, no matter how smooth it sounds going down.",
+      "Ezekiel 14 turns from false prophets to false worshipers -- elders who come to inquire of the Lord while carrying idols set up in their hearts. God says He will answer such a man \"according to the multitude of his idols,\" which is to say, He will let the idol finally reveal itself for the nothing that it is. We don't usually bow before carved images. We do bring God our halfway hearts, asking Him to bless what we haven't actually surrendered.",
+      "Both chapters press the same question: what are we actually trusting, and is it able to hold? Whitewash can't survive a storm, and idols can't survive an honest reckoning with the living God. Underneath it all, that's exactly where the First Commandment leaves us standing -- stripped of our plaster and our propped-up images, free to fear, love, and trust in God alone, the one wall that doesn't fall."
+    ],
+    "confession": {
+      "quote": "We should fear, love, and trust in God above all things.",
+      "cite": "Small Catechism, The Ten Commandments — The First Commandment",
+      "url": "https://bookofconcord.org/small-catechism/ten-commandments/"
+    },
+    "confessionIdUsed": "sc-first-commandment",
+    "generatedBy": "automation"
   }
 }
