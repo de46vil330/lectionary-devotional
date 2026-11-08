@@ -156,5 +156,23 @@
     },
     "confessionIdUsed": "sc-first-commandment",
     "generatedBy": "automation"
+  },
+  "11-09": {
+    "label": "Daily Lectionary",
+    "verse": "\"I passed by you and saw you weltering in your blood. And as you lay in your blood, I said to you, Live.\"",
+    "citation": "Ezekiel 16:6, ESV",
+    "heading": "The Foundling God Called Beloved",
+    "paragraphs": [
+      "Ezekiel 16 is one of the hardest chapters in the Bible to read in public, and that's exactly why it needs to be heard. God tells Israel's story as a foundling: an unwanted infant, cord uncut, left squirming in her own blood in an open field. No one even bothered to wash her. That's the picture before any covenant, any law, any glory -- just an abandoned newborn who, by all rights, should have died there.",
+      "But God passes by. He doesn't pass by to judge the child and move on -- he stops, and he speaks life over her: Live. He washes her, clothes her, feeds her, covers her nakedness, adorns her like a bride. Every good thing she has, she has because he gave it. This is the whole shape of grace in miniature: not that she was worth saving, but that he chose to save her anyway, and then kept giving.",
+      "The evening reading turns brutal because that's what makes the first half so important to remember -- Israel takes every gift and turns it into an idol, trusting the jewelry instead of the giver. It's tempting to read that only as ancient history, but the diagnosis fits us too: we take what God has freely given and build our confidence out of it, forgetting the hand that clothed us when we had nothing. The mercy of the chapter is that the God who said \"Live\" over an abandoned infant is the same God who, even after all her unfaithfulness, moves to remember his covenant and restore her -- not because she earned it back, but because that was never how it worked in the first place."
+    ],
+    "confession": {
+      "quote": "Also they teach that since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence…",
+      "cite": "Augsburg Confession, Article II — Of Original Sin",
+      "url": "https://bookofconcord.org/augsburg-confession/original-sin/"
+    },
+    "confessionIdUsed": "ac-ii-original-sin",
+    "generatedBy": "automation"
   }
 }
