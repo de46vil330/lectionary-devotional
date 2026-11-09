@@ -174,5 +174,23 @@
     },
     "confessionIdUsed": "ac-ii-original-sin",
     "generatedBy": "automation"
+  },
+  "11-10": {
+    "label": "Daily Lectionary",
+    "verse": "\"Yet I will remember my covenant with you in the days of your youth, and I will establish with you an everlasting covenant.\"",
+    "citation": "Ezekiel 16:60, ESV",
+    "heading": "Remembered in Spite of Everything",
+    "paragraphs": [
+      "Ezekiel 16 ends about as harshly as a chapter can end. God compares Jerusalem to a woman worse than her sisters Samaria and Sodom -- worse, because she knew better and still ran after every foreign god and foreign bed she could find. There's no softening it. The chapter catalogs unfaithfulness in detail precisely so that no one can say it wasn't deserved. This is what sin actually looks like when God names it instead of us.",
+      "And then, right at the bottom of that pit, comes verse 60: I will remember my covenant. Not because Jerusalem repented first, not because she earned it back, but because God is the kind of God who remembers his own promises even when we've trashed every reason he'd have to keep them. Chapter 17 picks up the same pattern in the image of the eagles and the vine -- Judah's kings scheme and shift alliances and trust in Egypt instead of God, and judgment falls. But even there, at the very end, the Lord promises to plant a tender sprig himself on a high mountain, something he grows, not something they grow.",
+      "That's the whole shape of grace in two chapters: human unfaithfulness laid bare without excuse, and God's faithfulness breaking in anyway, unearned, from his side alone. It's not a reward for better behavior next time. It's a covenant he remembers when we can't even remember to be ashamed. The planting is his work, start to finish -- which is exactly why it can be trusted."
+    ],
+    "confession": {
+      "quote": "Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor... This faith God imputes for righteousness in His sight.",
+      "cite": "Augsburg Confession, Article IV — Of Justification",
+      "url": "https://bookofconcord.org/augsburg-confession/of-justification/"
+    },
+    "confessionIdUsed": "ac-iv-justification",
+    "generatedBy": "automation"
   }
 }
