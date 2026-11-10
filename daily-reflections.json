@@ -192,5 +192,23 @@
     },
     "confessionIdUsed": "ac-iv-justification",
     "generatedBy": "automation"
+  },
+  "11-11": {
+    "label": "Daily Lectionary",
+    "verse": "\"The soul that sinneth, it shall die... but if the wicked will turn from all his sins that he hath committed... he shall surely live, he shall not die.\"",
+    "citation": "Ezekiel 18:20, 21, KJV",
+    "heading": "The Soul Who Turns Shall Live",
+    "paragraphs": [
+      "Ezekiel 18 tackles a proverb the exiles kept repeating: the fathers ate sour grapes, and the children's teeth are set on edge. In other words, we're paying for someone else's sins -- it's not fair. God answers by insisting that every soul stands before him on its own account. The son doesn't bear the father's guilt, nor the father the son's. Each of us is addressed directly, personally, with no hiding behind the sins of a previous generation.",
+      "But don't mistake this for a tidy system of merit, where good people live and bad people die by the ledger. The chapter's real surprise is how God handles reversal: the righteous man who turns to wickedness forfeits all his righteousness, and the wicked man who turns from his sin finds none of his evil remembered against him. God isn't counting up a moral balance sheet. He's asking a different question entirely -- where are you now, and will you turn?",
+      "Then comes the line that undercuts every excuse we make for God: \"Have I any pleasure at all that the wicked should die? ... and not that he should return from his ways, and live?\" This is not a God waiting to pounce on failure, but one pleading for repentance, almost scandalously eager to forgive. Ezekiel 19's funeral dirge over Israel's fallen princes only sharpens the contrast -- left to themselves, kings and nations wither into laments. The turning, the living, the mercy -- all of it has to come from outside us, from a God who takes no pleasure in death but delights to give life."
+    ],
+    "confession": {
+      "quote": "Of Repentance they teach that for those who have fallen after Baptism there is remission of sins whenever they are converted, and that the Church ought to impart absolution to those thus returning to repentance... They also are rejected who do not teach that remission of sins comes through faith but command us to merit grace through satisfactions of our own.",
+      "cite": "Augsburg Confession, Article XII — Of Repentance",
+      "url": "https://bookofconcord.org/augsburg-confession/of-repentance/"
+    },
+    "confessionIdUsed": "ac-xii-repentance",
+    "generatedBy": "automation"
   }
 }
