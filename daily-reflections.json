@@ -210,5 +210,23 @@
     },
     "confessionIdUsed": "ac-xii-repentance",
     "generatedBy": "automation"
+  },
+  "11-12": {
+    "label": "Daily Lectionary",
+    "verse": "\"Yet I withdrew my hand and acted for the sake of my name, that it should not be profaned in the sight of the nations.\"",
+    "citation": "Ezekiel 20:22, ESV",
+    "heading": "A History of Idols and Patience",
+    "paragraphs": [
+      "The elders come to Ezekiel wanting a word from the Lord, and instead they get a history lesson -- a hard one. God walks back through Egypt, the wilderness, the generations, and the refrain is the same each time: I gave them my statutes, and they rebelled. They worshiped the idols they were told to throw away. They profaned the Sabbaths I gave them for rest. Generation after generation, the pattern doesn't break. It isn't just Israel's biography -- it's a mirror held up to every human heart, ours included, that keeps chasing lesser gods while the true God keeps calling us back.",
+      "What's strange, and what saves this chapter from being only indictment, is God's repeated reason for not simply wiping them out: \"for the sake of my name.\" Not because Israel earned a reprieve. Not because their repentance was finally sincere enough. God relents, generation after generation, because his own name and character are at stake -- his reputation for mercy among the watching nations. The sparing has nothing to do with merit and everything to do with who God is.",
+      "That's the thread running under all this wilderness wandering and idol-smashing: a God who disciplines but doesn't abandon, who judges sin honestly but binds himself to act for his own name's sake rather than according to what we deserve. We don't come to him with a cleaner record than Israel's elders. But we come to the same God, whose faithfulness was never contingent on ours -- the same mercy that would later be revealed fully in a name above every name, given not because we merited it, but because grace is simply who he is."
+    ],
+    "confession": {
+      "quote": "Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor... This faith God imputes for righteousness in His sight.",
+      "cite": "Augsburg Confession, Article IV — Of Justification",
+      "url": "https://bookofconcord.org/augsburg-confession/of-justification/"
+    },
+    "confessionIdUsed": "ac-iv-justification",
+    "generatedBy": "automation"
   }
 }
