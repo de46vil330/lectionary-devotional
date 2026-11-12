@@ -228,5 +228,23 @@
     },
     "confessionIdUsed": "ac-iv-justification",
     "generatedBy": "automation"
+  },
+  "11-13": {
+    "label": "Daily Lectionary",
+    "verse": "\"Behold, I am against you, and will draw forth my sword out of his sheath, and will cut off from thee the righteous and the wicked.\"",
+    "citation": "Ezekiel 21:3, KJV",
+    "heading": "The Sword Drawn Against Us",
+    "paragraphs": [
+      "Ezekiel 21 is a hard chapter to sit with. God tells the prophet to set his face toward Jerusalem and prophesy against it -- a sword sharpened and polished, ready to cut down righteous and wicked alike. There's no room here for the comfortable idea that bad things only happen to bad people. The sword comes because the whole people, the whole house, has gone wrong at the root. This is Law in its rawest form: not a scolding, but an announcement of judgment already set in motion.",
+      "Notice what the chapter doesn't do: it doesn't let the reader stand outside the warning, nodding at how it must have applied to someone else, long ago. The sword is sharpened \"that it may glitter,\" the text says -- it's meant to be seen, feared, reckoned with. Ezekiel himself is told to groan with breaking heart before the people, so that when they ask why, he can tell them: because of the news that is coming, every heart will melt. God does not delight in hiding the truth about where sin leads.",
+      "And yet the same God who draws the sword is the one who, through the prophets and finally through His Son, absorbs its edge Himself. Law like this is meant to strip away our illusions of safety apart from Christ -- not to leave us there. When we've stopped pretending the sword is for someone else, we're finally in the place where the Gospel can do its real work: pointing us back to the mercy that turns even this chapter toward hope."
+    ],
+    "confession": {
+      "quote": "Also they teach that since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence…",
+      "cite": "Augsburg Confession, Article II — Of Original Sin",
+      "url": "https://bookofconcord.org/augsburg-confession/original-sin/"
+    },
+    "confessionIdUsed": "ac-ii-original-sin",
+    "generatedBy": "automation"
   }
 }
