@@ -246,5 +246,23 @@
     },
     "confessionIdUsed": "ac-ii-original-sin",
     "generatedBy": "automation"
+  },
+  "11-14": {
+    "label": "Daily Lectionary",
+    "verse": "\"You have become guilty by the blood that you have shed, and defiled by the idols that you have made.\"",
+    "citation": "Ezekiel 22:4, ESV",
+    "heading": "Bloodguilt in the City's Streets",
+    "paragraphs": [
+      "Ezekiel 22 reads like a prosecutor's brief. God walks through Jerusalem's charge sheet -- bloodshed, idols, dishonored parents, oppressed strangers, abused widows, bribed judges, profaned Sabbaths -- and the list doesn't let up. This isn't a city with a few bad actors. It's a whole community, prophet and priest and prince alike, each one twisting their calling into an excuse for profit or cruelty. God even says He looked for one man to stand in the gap and found no one.",
+      "Then the evening reading pushes the knife in further with the story of Oholah and Oholibah -- two sisters whose history is told as spiritual adultery, chasing after foreign powers and their gods instead of trusting the Lord who claimed them. It's uncomfortable to read, and it's meant to be. Judah doesn't get credit for having watched her sister's judgment fall and learning the lesson. She goes further into ruin.",
+      "What stands out is that God names all this plainly rather than softening it, because a diagnosis that isn't named can't be healed. The city melts in the furnace of His word not to destroy for destruction's sake, but because the dross has to be seen for what it is. We don't come to this chapter feeling superior to Jerusalem; we come to it recognizing our own divided hearts, and needing the same God who indicts to also be the one who, in Christ, refuses to let that be the final word."
+    ],
+    "confession": {
+      "quote": "Also they teach that since the fall of Adam all men begotten in the natural way are born with sin, that is, without the fear of God, without trust in God, and with concupiscence…",
+      "cite": "Augsburg Confession, Article II — Of Original Sin",
+      "url": "https://bookofconcord.org/augsburg-confession/original-sin/"
+    },
+    "confessionIdUsed": "ac-ii-original-sin",
+    "generatedBy": "automation"
   }
 }
