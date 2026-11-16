@@ -264,5 +264,23 @@
     },
     "confessionIdUsed": "ac-ii-original-sin",
     "generatedBy": "automation"
+  },
+  "11-17": {
+    "label": "Daily Lectionary",
+    "verse": "\"I shall be filled, she is laid waste\" (Ezekiel 26:2, RSV)",
+    "citation": "Ezekiel 26:2, RSV",
+    "heading": "The Fall of a Proud City",
+    "paragraphs": [
+      "Tyre claps its hands over Jerusalem's ruin. \"Aha, the gate of the peoples is broken; it has swung open to me; I shall be filled, she is laid waste.\" It's an ugly little glee -- one city's wreckage becomes another's business opportunity. Tyre doesn't mourn Jerusalem's fall; it calculates the profit margin. God hears that gloating, and the word that comes back is not a scolding but a sentence: Tyre, too, will be scraped bare like a rock, its towers thrown down, its very dust swept into the sea. The city that trusted its walls and its wealth and its harbor trade learns that no fortress built by human hands stands forever before the Lord.",
+      "By evening, Ezekiel 27 lingers over Tyre's splendor like a funeral dirge sung in advance -- cedar from Lebanon, fine linen from Egypt, silver and iron and tin crossing her decks, merchants from every coast filling her holds. It reads almost like a love song to commerce, except we already know how the song ends. All that glory, all that careful craftsmanship and far-flung trade, will go down with the ship when the east wind breaks her in the heart of the sea. The mourners on the shore wail not for a person but for an economy, a way of life that seemed too large and too interwoven to fail.",
+      "There's a sobering word here about where we plant our confidence -- in strength, in supply chains, in whatever makes us feel too secure to fall. But the deeper comfort isn't found in building better walls; it's in remembering whose hands actually hold the nations, including ours. We fear, love, and trust God above all things not because every other thing is evil, but because every other thing -- cedar ships, city gates, bank accounts -- eventually goes down with the tide. He alone does not."
+    ],
+    "confession": {
+      "quote": "We should fear, love, and trust in God above all things.",
+      "cite": "Small Catechism, The Ten Commandments — The First Commandment",
+      "url": "https://bookofconcord.org/small-catechism/ten-commandments/"
+    },
+    "confessionIdUsed": "sc-first-commandment",
+    "generatedBy": "automation"
   }
 }
