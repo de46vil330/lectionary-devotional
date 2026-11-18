@@ -282,5 +282,23 @@
     },
     "confessionIdUsed": "sc-first-commandment",
     "generatedBy": "automation"
+  },
+  "11-19": {
+    "label": "Daily Lectionary",
+    "verse": "\"I will break the arms of Pharaoh... and I will scatter the Egyptians among the nations.\"",
+    "citation": "Ezekiel 30:22, 26, RSV",
+    "heading": "When the Proud Arm Is Broken",
+    "paragraphs": [
+      "Ezekiel 30 reads like a courtroom verdict against an empire that thought itself untouchable. Egypt, Pharaoh, and all her allies -- Cush, Put, Lydia -- are named one by one, and the sentence is the same for each: the day of the Lord is near, and it is a day of clouds, doom for the nations. Pharaoh's strong arm, the thing he trusted for glory and survival, will be broken by God's own hand. No treaty, no army, no idol-god of the Nile can stop it.",
+      "Chapter 31 pushes the point further with a parable instead of a decree. Assyria is pictured as a towering cedar in Eden's garden, so tall and well-watered that every bird nested in its branches and every beast found shade beneath it -- even the trees of God envied it. But pride in its own height brought it down; God handed it over to be cut down and cast aside, a warning carved in timber for Egypt and for every empire that mistakes its greatness for permanence.",
+      "It would be easy to read these chapters as ancient politics and move on, except that the same temptation lives in every human heart: to trust our own strength, our own towering achievements, as if they were the root of our life instead of a gift held in borrowed soil. Scripture keeps stripping that illusion away, not to crush us but to turn us somewhere steadier -- away from arms that break and cedars that fall, toward the God who alone justifies the humbled and raises up what has been cut down."
+    ],
+    "confession": {
+      "quote": "Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor... This faith God imputes for righteousness in His sight.",
+      "cite": "Augsburg Confession, Article IV — Of Justification",
+      "url": "https://bookofconcord.org/augsburg-confession/of-justification/"
+    },
+    "confessionIdUsed": "ac-iv-justification",
+    "generatedBy": "automation"
   }
 }
