@@ -300,5 +300,23 @@
     },
     "confessionIdUsed": "ac-iv-justification",
     "generatedBy": "automation"
+  },
+  "11-20": {
+    "label": "Daily Lectionary",
+    "verse": "\"Turn ye, turn ye from your evil ways; for why will ye die, O house of Israel?\"",
+    "citation": "Ezekiel 33:11, KJV",
+    "heading": "The Watchman's Warning and the Turn to Life",
+    "paragraphs": [
+      "Ezekiel 32 is a funeral dirge for Pharaoh and all of Egypt's might -- a nation that trusted in its own power now sinking into the pit with the rest of the uncircumcised dead. It's a grim, slow passage, almost liturgical in its repetition, as if God wants the point hammered in: every empire that refuses him ends the same way, in the same dark hole. There's no escaping it by strength or glory. Death levels everyone who will not be leveled by grace.",
+      "Then morning turns to evening and the tone shifts entirely. God sets up Ezekiel as a watchman, responsible to warn the people when the sword is coming. But the heart of the passage isn't the threat -- it's verse 11, where God practically pleads: he takes no pleasure in the death of the wicked, only that they turn and live. The warning exists because God wants something other than the funeral dirge of chapter 32. He wants turning, not burying.",
+      "This is the whole shape of repentance Lutherans confess: not a transaction where we earn our way back, but a real turning that God himself calls for and makes possible, met every time by his absolution. The watchman still has to speak -- sin is sin, and silence would be its own kind of unfaithfulness -- but the word spoken is meant to lead to life, not just to diagnosis. Even Pharaoh's grave in chapter 32 exists so that the next chapter's call to turn can sound all the more urgent, and all the more kind."
+    ],
+    "confession": {
+      "quote": "Of Repentance they teach that for those who have fallen after Baptism there is remission of sins whenever they are converted, and that the Church ought to impart absolution to those thus returning to repentance... They also are rejected who do not teach that remission of sins comes through faith but command us to merit grace through satisfactions of our own.",
+      "cite": "Augsburg Confession, Article XII — Of Repentance",
+      "url": "https://bookofconcord.org/augsburg-confession/of-repentance/"
+    },
+    "confessionIdUsed": "ac-xii-repentance",
+    "generatedBy": "automation"
   }
 }
