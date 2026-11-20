@@ -318,5 +318,23 @@
     },
     "confessionIdUsed": "ac-xii-repentance",
     "generatedBy": "automation"
+  },
+  "11-21": {
+    "label": "Daily Lectionary",
+    "verse": "\"Say to them, As I live, says the Lord GOD, I have no pleasure in the death of the wicked, but that the wicked turn from his way and live.\"",
+    "citation": "Ezekiel 33:11, ESV",
+    "heading": "The Watchman and the Shepherd",
+    "paragraphs": [
+      "By the time we reach chapter 33, the news has finally come: Jerusalem has fallen. Everything Ezekiel warned about has happened. And yet the people left behind, scattered and grieving, still want to argue with God -- our ways aren't fair, they say, even as the city burns. God answers by reminding Ezekiel of his job: he is a watchman. Not a judge, not an executioner, just a voice crying out so that no one can say they weren't warned. The watchman's word is law -- it exposes, it doesn't flatter, and it leaves no room for the comfortable lie that disaster just happens to people for no reason.",
+      "Then the people do something almost comic: they flock to hear Ezekiel like he's entertainment, loving his voice, admiring his words, and going home to live exactly as they did before. It's a sharp little picture of religion without repentance -- enjoying the sermon, ignoring the summons. The word of God was never meant to be background music for an unchanged life. Law that doesn't land is just noise, however beautifully it's sung.",
+      "But then the evening reading turns the page completely. The shepherds of Israel have fed themselves and let the flock scatter, wounded and lost on the mountains -- and God says, enough. I myself will search for my sheep. I will seek the lost, bind up the injured, strengthen the weak. This is the pivot the whole book has been driving toward: judgment was never God's last word, only his strange means to a tender end. He does not merely warn the sheep back into line; he comes looking for them himself."
+    ],
+    "confession": {
+      "quote": "We should fear, love, and trust in God above all things.",
+      "cite": "Small Catechism, The Ten Commandments — The First Commandment",
+      "url": "https://bookofconcord.org/small-catechism/ten-commandments/"
+    },
+    "confessionIdUsed": "sc-first-commandment",
+    "generatedBy": "automation"
   }
 }
