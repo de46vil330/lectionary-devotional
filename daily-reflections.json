@@ -336,5 +336,23 @@
     },
     "confessionIdUsed": "sc-first-commandment",
     "generatedBy": "automation"
+  },
+  "11-23": {
+    "label": "Daily Lectionary",
+    "verse": "\"I will make you perpetual desolations... then you will know that I am the LORD.\"",
+    "citation": "Ezekiel 35:9, ESV",
+    "heading": "Mount Seir's Grudge and God's New Heart",
+    "paragraphs": [
+      "Ezekiel 35 is a word against Mount Seir -- Edom, Israel's kinsman and ancient rival. Edom's sin wasn't some exotic idolatry; it was an old, familiar grudge, a perpetual enmity that cheered when Israel fell and tried to help itself to the inheritance God had already apportioned elsewhere. It's a mountain that says \"these two nations and these two countries shall be mine\" -- as if desolation were an opportunity rather than a judgment. God answers that grasping with desolation of its own. Grudges that feed on another's downfall do not build anything lasting; they just clear more ground for ruin.",
+      "Turn the page to Ezekiel 36, and the mountains of Israel hear something altogether different. The same prophet who pronounced doom on Seir now speaks tenderly to the hills that had been mocked, plundered, and slandered by the nations around them. God promises not desolation but restoration -- branches that bud, fruit that grows, people who return and build. The contrast is the whole point: one mountain range is judged for its cruelty, the other is comforted in its humiliation. It isn't because Israel earned better treatment. The text is blunt that this reversal comes because of God's own name, his own jealousy for his people, not their merit.",
+      "That's the hinge the whole chapter turns on, and it's worth sitting with. God doesn't restore Israel because they've proven themselves more faithful than Edom; later in this same chapter he's already said as much about their own defiling of the land. The mercy shown to the mountains of Israel is unearned, rooted in God's zeal for his own name and his promises -- not in anything dug up from human merit or strength. That's the same confession the church makes about every sinner brought back from ruin: not justified by our own works, but freely, for Christ's sake, received into favor through faith alone."
+    ],
+    "confession": {
+      "quote": "Men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith, when they believe that they are received into favor... This faith God imputes for righteousness in His sight.",
+      "cite": "Augsburg Confession, Article IV — Of Justification",
+      "url": "https://bookofconcord.org/augsburg-confession/of-justification/"
+    },
+    "confessionIdUsed": "ac-iv-justification",
+    "generatedBy": "automation"
   }
 }
