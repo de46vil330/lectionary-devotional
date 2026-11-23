@@ -354,5 +354,23 @@
     },
     "confessionIdUsed": "ac-iv-justification",
     "generatedBy": "automation"
+  },
+  "11-24": {
+    "label": "Daily Lectionary",
+    "verse": "\"A new heart also will I give you, and a new spirit will I put within you.\"",
+    "citation": "Ezekiel 36:26, KJV",
+    "heading": "A New Heart from Dry Bones",
+    "paragraphs": [
+      "God is blunt with Israel in the morning reading: I am not doing this for your sake. The house of Israel has profaned his holy name among the nations, dragging his reputation through the mud of their own rebellion, and if he restores them it will not be because they've earned it back. It's a hard word, but an honest one -- it strips away any thought that God's favor is a reward for good behavior. He acts for his name's sake, not ours, and that is actually good news for people who have nothing to offer.",
+      "Then comes the promise: a new heart, a new spirit, water sprinkled clean, the stony heart cut out and a heart of flesh put in its place. This isn't self-improvement. It's not Israel trying harder. It's God doing surgery on people who are, by their own doing, unclean and heart-dead. The text doesn't pretend otherwise -- that's exactly the point of the valley of dry bones that follows in chapter 37. Can these bones live? Only the Lord knows, and only the Lord's breath can make it so.",
+      "That valley is us. Preaching to bones doesn't look like a strategy for success, yet the word goes out and sinew and breath come where there was nothing but dust. It's a picture of baptism before baptism existed -- dead flesh given new life purely by the Spirit's doing, not the bones' cooperation. Whatever in you feels dried out, scattered, past hope: the word of the Lord is still spoken over valleys like that, and bones still stand up and live."
+    ],
+    "confession": {
+      "quote": "It works forgiveness of sins, delivers from death and the devil, and gives eternal salvation to all who believe this, as the words and promises of God declare.",
+      "cite": "Small Catechism, The Sacrament of Holy Baptism — What Benefits Does Baptism Give?",
+      "url": "https://bookofconcord.org/small-catechism/the-sacrament-of-holy-baptism/"
+    },
+    "confessionIdUsed": "sc-baptism-benefits",
+    "generatedBy": "automation"
   }
 }
